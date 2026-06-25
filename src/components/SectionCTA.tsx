@@ -75,20 +75,20 @@ const SectionCTA: React.FC = () => {
           <a href="#products" className="btn-ghost">Explore Products</a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', width: '100%', maxWidth: '900px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '4rem', paddingBottom: '4rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '4rem', width: '100%', maxWidth: '1000px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '4rem', paddingBottom: '4rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', minWidth: '250px' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>CALL US</h4>
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
               <a href="tel:9444077615" className="text-body" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem', transition: 'color 0.3s' }}>+91 94440 77615</a>
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', minWidth: '250px' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>EMAIL US</h4>
             <a href="mailto:nirmalwires@gmail.com" className="text-body" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem', transition: 'color 0.3s' }}>nirmalwires@gmail.com</a>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', minWidth: '250px' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>VISIT US</h4>
-            <p className="text-body" style={{ color: '#fff', fontSize: '1rem', margin: 0, lineHeight: '1.6' }}>7, 653, Muthamizh Nagar,<br/>Kodungaiyur, Chennai,<br/>Tamil Nadu 600118</p>
+            <p className="text-body" style={{ color: '#fff', fontSize: '1rem', margin: 0, lineHeight: '1.6', textAlign: 'center' }}>7, 653, Muthamizh Nagar,<br/>Kodungaiyur, Chennai,<br/>Tamil Nadu 600118</p>
             <a href="https://www.google.com/maps/dir/?api=1&destination=Nirmal+Wire+Netting+Industries,+Kodungaiyur,+Chennai" target="_blank" rel="noreferrer" style={{ color: 'var(--bg-primary)', backgroundColor: 'var(--accent-green)', padding: '0.6rem 1.2rem', borderRadius: '50px', textDecoration: 'none', marginTop: '1rem', fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: '0.9rem' }}>Get Directions</a>
           </div>
         </div>
