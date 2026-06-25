@@ -46,14 +46,16 @@ const SectionCTA: React.FC = () => {
         {/* Decorative badge covering watermark */}
         <div style={{
           position: 'absolute',
-          bottom: 0,
+          bottom: '3rem',
           right: 0,
           padding: '1.2rem 2rem 1.2rem 3.5rem',
           backgroundColor: 'rgba(5, 5, 5, 0.95)',
           backdropFilter: 'blur(10px)',
           borderTopLeftRadius: '25px',
+          borderBottomLeftRadius: '25px',
           borderTop: '1px solid rgba(255,255,255,0.1)',
           borderLeft: '1px solid rgba(255,255,255,0.1)',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
           color: 'var(--accent-green)',
           fontFamily: 'var(--font-display)',
           fontSize: '0.9rem',

@@ -320,3 +320,62 @@ html.lenis, html.lenis body {
   0% { transform: rotateX(0deg) rotateY(0deg); }
   100% { transform: rotateX(360deg) rotateY(360deg); }
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  /* Hide desktop nav links, show hamburger */
+  .nav-links {
+    display: none;
+  }
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .nav-links.mobile-open a {
+    font-size: 1.5rem;
+  }
+  .mobile-menu-btn {
+    display: block !important;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Generic overrides */
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+  }
+  .text-hero {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  .text-h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .desktop-quote-btn {
+    display: none !important;
+  }
+  .obsidian-text-left, .obsidian-text-right {
+    display: none !important;
+  }
+  .mobile-card-content {
+    display: flex !important;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+}

@@ -195,7 +195,7 @@ const SectionApplications: React.FC = () => {
             className="obsidian-card"
             style={{ 
               position: 'absolute',
-              width: 'clamp(280px, 25vw, 450px)', 
+              width: 'clamp(280px, 85vw, 450px)', 
               aspectRatio: '3/4', 
               borderRadius: '16px', 
               overflow: 'hidden',
@@ -206,6 +206,20 @@ const SectionApplications: React.FC = () => {
             <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             {/* GPU-Accelerated Darkening Overlay */}
             <div className="card-overlay" style={{ position: 'absolute', inset: 0, backgroundColor: '#000', pointerEvents: 'none' }}></div>
+            
+            {/* Mobile Text Overlay (Only visible on small screens via CSS or handled by the same opacity fade) */}
+            <div className="mobile-card-content" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '2rem', display: 'none', flexDirection: 'column', gap: '0.5rem', background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%)', zIndex: 10 }}>
+              <div style={{ fontSize: '1rem', color: 'var(--accent-cyan)', fontWeight: 600, letterSpacing: '0.2em' }}>
+                {idx + 1} / {expertiseData.length}
+              </div>
+              <h3 className="text-h1" style={{ fontSize: '2rem', lineHeight: 1.1 }}>
+                {item.title}
+              </h3>
+              <p className="text-body" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                {item.desc}
+              </p>
+            </div>
+
           </div>
         ))}
       </div>

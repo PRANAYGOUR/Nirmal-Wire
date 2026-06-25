@@ -129,14 +129,15 @@ const SectionVideo: React.FC<SectionVideoProps> = ({ videoSrc, headline, content
         overflow: 'hidden'
       }}
     >
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5vw', alignItems: 'center', direction: isLeft ? 'ltr' : 'rtl' }}>
+      <div className="container mobile-stack" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5vw', alignItems: 'center', direction: isLeft ? 'ltr' : 'rtl' }}>
         
         {/* Video Side */}
-        <div style={{ position: 'relative', height: '70vh', borderRadius: '20px', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', height: 'clamp(300px, 50vh, 70vh)', borderRadius: '20px', overflow: 'hidden' }}>
           <div ref={videoContainerRef} style={{ width: '100%', height: '120%', position: 'absolute', top: '-10%', left: 0 }}>
             <video
               ref={videoRef}
               src={videoSrc}
+              autoPlay
               muted
               loop
               playsInline

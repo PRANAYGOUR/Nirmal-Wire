@@ -56,8 +56,8 @@ const SectionProducts: React.FC = () => {
                 opacity: isActive ? 1 : 0.1,
                 pointerEvents: isActive ? 'auto' : 'auto',
                 transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
-                width: '600px',
-                height: '400px'
+                width: 'clamp(280px, 90vw, 600px)',
+                height: 'clamp(200px, 60vw, 400px)'
               }}
             >
               {/* Product Visual */}

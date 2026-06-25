@@ -56,9 +56,9 @@ const SectionTimeline: React.FC = () => {
 
   return (
     <section ref={containerRef} id="manufacturing" style={{ padding: '10rem 0', backgroundColor: 'var(--bg-secondary)', position: 'relative' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'flex-start' }}>
+      <div className="container mobile-stack" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'flex-start' }}>
         
-        <div style={{ position: 'sticky', top: '30vh' }}>
+        <div style={{ position: 'sticky', top: '30vh', zIndex: 10 }}>
           <h2 className="text-h1" style={{ marginBottom: '2rem' }}>From Wire to Product.</h2>
           <p className="text-body" style={{ maxWidth: '400px' }}>
             We source the highest quality premium GI wire from trusted partners to manufacture our robust product line. Every step of our conversion process is tightly controlled to ensure maximum durability, precise geometry, and an impeccable finish.

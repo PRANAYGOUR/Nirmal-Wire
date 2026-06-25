@@ -4,6 +4,8 @@ const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(false);
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     // Show navigation slightly after page load
     const timer = setTimeout(() => {
@@ -25,10 +27,12 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
+  const closeMenu = () => setMobileMenuOpen(false);
+
   return (
     <nav className={`nav-glass ${scrolled ? 'scrolled' : ''} ${visible ? 'visible' : ''}`}>
-      <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-        <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', zIndex: 1002 }}>
+        <a href="#" onClick={closeMenu} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           
           {/* 3D Rotating Concertina Coil Logo */}
           <div style={{ width: '45px', height: '45px', perspective: '300px', marginRight: '1rem' }}>
@@ -67,16 +71,32 @@ const Navigation: React.FC = () => {
           </div>
         </a>
       </div>
-      <div className="nav-links">
-        <a href="#overview">Overview</a>
-        <a href="#solutions">Evolution Map</a>
-        <a href="#applications">Expertise</a>
-        <a href="#manufacturing">Manufacturing</a>
-        <a href="#products">Products</a>
+
+      <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        {mobileMenuOpen ? '✕' : '☰'}
+      </button>
+
+      <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <a href="#overview" onClick={closeMenu}>Overview</a>
+        <a href="#solutions" onClick={closeMenu}>Evolution Map</a>
+        <a href="#applications" onClick={closeMenu}>Expertise</a>
+        <a href="#manufacturing" onClick={closeMenu}>Manufacturing</a>
+        <a href="#products" onClick={closeMenu}>Products</a>
+        
+        {/* Only show Get Quote inside mobile menu, hide the main one on mobile via CSS if needed, but for now just duplicate it in the menu for mobile users */}
+        {mobileMenuOpen && (
+          <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-primary" onClick={closeMenu} style={{ padding: '0.6rem 1.5rem', fontSize: '1rem', marginTop: '1rem' }}>
+            Get Quote
+          </a>
+        )}
       </div>
-      <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-ghost" style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}>
-        Get Quote
-      </a>
+
+      {/* Desktop Get Quote button */}
+      {!mobileMenuOpen && (
+        <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-ghost desktop-quote-btn" style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}>
+          Get Quote
+        </a>
+      )}
     </nav>
   );
 };
