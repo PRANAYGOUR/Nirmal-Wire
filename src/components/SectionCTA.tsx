@@ -32,7 +32,7 @@ const SectionCTA: React.FC = () => {
   }, []);
 
   return (
-    <section id="quote" ref={containerRef} style={{ minHeight: '100vh', paddingBottom: '4rem', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <section id="quote" ref={containerRef} style={{ position: 'relative', overflow: 'hidden', padding: '10rem 0 2rem 0' }}>
       
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <img 
@@ -65,17 +65,17 @@ const SectionCTA: React.FC = () => {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h2 className="text-hero" style={{ marginBottom: '1.5rem', marginTop: '2rem' }}>Building Stronger Boundaries.</h2>
+        <h2 className="text-hero" style={{ marginBottom: '1.5rem' }}>Building Stronger Boundaries.</h2>
         <p className="text-body" style={{ maxWidth: '600px', marginBottom: '3rem', fontSize: '1.3rem' }}>
           Premium wire and fencing solutions engineered for durability, protection, and performance.
         </p>
         
-        <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '4rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '6rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-primary">Get Quote</a>
           <a href="#products" className="btn-ghost">Explore Products</a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', width: '100%', maxWidth: '900px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '3rem', paddingBottom: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', width: '100%', maxWidth: '900px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '4rem', paddingBottom: '4rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>CALL US</h4>
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -94,7 +94,7 @@ const SectionCTA: React.FC = () => {
         </div>
       </div>
 
-      <footer style={{ position: 'absolute', bottom: '1.5rem', width: '100%', textAlign: 'center', zIndex: 10 }}>
+      <footer style={{ position: 'relative', zIndex: 10, width: '100%', textAlign: 'center', marginTop: '2rem' }}>
         <p className="text-body" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)' }}>
           &copy; {new Date().getFullYear()} Nirmal Wire Netting Industries. All rights reserved.
         </p>
