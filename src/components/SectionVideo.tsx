@@ -145,7 +145,9 @@ const SectionVideo: React.FC<SectionVideoProps> = ({ videoSrc, headline, content
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                filter: 'brightness(0.7) contrast(1.1)'
+                filter: 'brightness(0.7) contrast(1.1)',
+                transform: 'scale(1.15)',
+                transformOrigin: 'center center'
               }}
             />
           </div>

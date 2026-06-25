@@ -46,16 +46,14 @@ const SectionCTA: React.FC = () => {
         {/* Decorative badge covering watermark */}
         <div style={{
           position: 'absolute',
-          bottom: '3rem',
-          right: 0,
-          padding: '1.2rem 2rem 1.2rem 3.5rem',
+          top: 0,
+          left: 0,
+          padding: '1.2rem 2rem 1.2rem 2rem',
           backgroundColor: 'rgba(5, 5, 5, 0.95)',
           backdropFilter: 'blur(10px)',
-          borderTopLeftRadius: '25px',
-          borderBottomLeftRadius: '25px',
-          borderTop: '1px solid rgba(255,255,255,0.1)',
-          borderLeft: '1px solid rgba(255,255,255,0.1)',
+          borderBottomRightRadius: '25px',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
+          borderRight: '1px solid rgba(255,255,255,0.1)',
           color: 'var(--accent-green)',
           fontFamily: 'var(--font-display)',
           fontSize: '0.9rem',
@@ -67,17 +65,17 @@ const SectionCTA: React.FC = () => {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h2 className="text-hero" style={{ marginBottom: '1.5rem' }}>Building Stronger Boundaries.</h2>
+        <h2 className="text-hero" style={{ marginBottom: '1.5rem', marginTop: '2rem' }}>Building Stronger Boundaries.</h2>
         <p className="text-body" style={{ maxWidth: '600px', marginBottom: '3rem', fontSize: '1.3rem' }}>
           Premium wire and fencing solutions engineered for durability, protection, and performance.
         </p>
         
-        <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'flex', gap: '1.5rem', marginBottom: '4rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-primary">Get Quote</a>
           <a href="#products" className="btn-ghost">Explore Products</a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', width: '100%', maxWidth: '900px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '3rem', paddingBottom: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', width: '100%', maxWidth: '900px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '3rem', paddingBottom: '4rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>CALL US</h4>
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -90,13 +88,13 @@ const SectionCTA: React.FC = () => {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <h4 style={{ color: 'var(--accent-cyan)', fontFamily: 'var(--font-display)', letterSpacing: '0.1em' }}>VISIT US</h4>
-            <p className="text-body" style={{ color: '#fff', fontSize: '1rem', margin: 0 }}>7, 653, Muthamizh Nagar, Kodungaiyur,<br/>Chennai, Tamil Nadu 600118</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Nirmal+Wire+Netting+Industries,+Kodungaiyur,+Chennai" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-green)', textDecoration: 'underline', marginTop: '0.5rem', fontFamily: 'var(--font-sans)', fontWeight: 500 }}>Get Directions &rarr;</a>
+            <p className="text-body" style={{ color: '#fff', fontSize: '1rem', margin: 0, lineHeight: '1.6' }}>7, 653, Muthamizh Nagar,<br/>Kodungaiyur, Chennai,<br/>Tamil Nadu 600118</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Nirmal+Wire+Netting+Industries,+Kodungaiyur,+Chennai" target="_blank" rel="noreferrer" style={{ color: 'var(--bg-primary)', backgroundColor: 'var(--accent-green)', padding: '0.6rem 1.2rem', borderRadius: '50px', textDecoration: 'none', marginTop: '1rem', fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: '0.9rem' }}>Get Directions</a>
           </div>
         </div>
       </div>
 
-      <footer style={{ position: 'absolute', bottom: '1rem', width: '100%', textAlign: 'center', zIndex: 10 }}>
+      <footer style={{ position: 'absolute', bottom: '1.5rem', width: '100%', textAlign: 'center', zIndex: 10 }}>
         <p className="text-body" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)' }}>
           &copy; {new Date().getFullYear()} Nirmal Wire Netting Industries. All rights reserved.
         </p>

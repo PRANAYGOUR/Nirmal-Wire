@@ -174,13 +174,6 @@ const SectionOrigin: React.FC<SectionOriginProps> = ({ frameCount }) => {
           </div>
         </div>
 
-        {/* Loading Indicator */}
-        {!isLoaded && (
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#050505', zIndex: 100 }}>
-            <div style={{ color: 'var(--accent-green)', fontFamily: 'var(--font-display)', fontSize: '1.5rem' }}>Loading Cinematic Experience...</div>
-          </div>
-        )}
-
       </div>
     </div>
   );
