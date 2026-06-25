@@ -32,7 +32,7 @@ const SectionCTA: React.FC = () => {
   }, []);
 
   return (
-    <section id="quote" ref={containerRef} style={{ height: '100vh', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <section id="quote" ref={containerRef} style={{ minHeight: '100vh', paddingBottom: '4rem', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <img 
