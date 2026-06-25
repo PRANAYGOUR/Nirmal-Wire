@@ -85,7 +85,17 @@ const Navigation: React.FC = () => {
         
         {/* Only show Get Quote inside mobile menu, hide the main one on mobile via CSS if needed, but for now just duplicate it in the menu for mobile users */}
         {mobileMenuOpen && (
-          <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" className="btn-primary" onClick={closeMenu} style={{ padding: '0.6rem 1.5rem', fontSize: '1rem', marginTop: '1rem' }}>
+          <a href="mailto:nirmalwires@gmail.com?subject=Enquiry" onClick={closeMenu} style={{ 
+            padding: '0.8rem 2rem', 
+            fontSize: '1.2rem', 
+            marginTop: '1rem',
+            backgroundColor: 'var(--accent-green)',
+            color: '#ffffff',
+            textDecoration: 'none',
+            borderRadius: '50px',
+            fontWeight: 600,
+            boxShadow: '0 4px 15px rgba(31, 165, 91, 0.4)'
+          }}>
             Get Quote
           </a>
         )}

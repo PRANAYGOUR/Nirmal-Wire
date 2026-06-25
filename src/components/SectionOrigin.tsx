@@ -12,33 +12,38 @@ const SectionOrigin: React.FC<SectionOriginProps> = ({ frameCount }) => {
   // Preload Images
   useEffect(() => {
     let isCancelled = false;
-    let loadedCount = 0;
     const loadedImages: HTMLImageElement[] = [];
 
     const loadImages = async () => {
+      const promises = [];
       for (let i = 1; i <= frameCount; i++) {
         if (isCancelled) break;
         const img = new Image();
         const frameIndex = i.toString().padStart(3, '0');
-        img.src = `/sequence/ezgif-frame-${frameIndex}.png`;
         
-        await new Promise((resolve) => {
-          img.onload = () => {
-            loadedCount++;
-            resolve(null);
-          };
-          img.onerror = () => {
-            loadedCount++;
-            resolve(null);
-          };
+        const p = new Promise((resolve) => {
+          img.onload = () => resolve(null);
+          img.onerror = () => resolve(null);
         });
         
+        img.src = `/sequence/ezgif-frame-${frameIndex}.png`;
         loadedImages[i - 1] = img;
+        promises.push(p);
+
+        // Immediately unblock the UI after the first frame loads so mobile users aren't stuck
+        if (i === 1) {
+          await p;
+          if (!isCancelled) {
+            setImages([...loadedImages]);
+            setIsLoaded(true);
+          }
+        }
       }
       
+      // Load the rest in the background in parallel
+      await Promise.all(promises);
       if (!isCancelled) {
         setImages(loadedImages);
-        setIsLoaded(true);
       }
     };
 
